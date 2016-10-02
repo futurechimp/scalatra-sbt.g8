@@ -1,9 +1,15 @@
 import $package$._
 import org.scalatra._
 import javax.servlet.ServletContext
+import $package$.http.api.{ApiDocsController, $name$ApiDocs}
 
 class ScalatraBootstrap extends LifeCycle {
+  implicit val swagger = new $name;format="Camel"$ApiDocs
+  implicit val bindingModule = AppBindings
+
   override def init(context: ServletContext) {
-    context.mount(new $servlet_name$, "/*")
+    // Docs
+    context.mount(new ApiDocsController, "/api-docs")
+
   }
 }

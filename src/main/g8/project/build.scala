@@ -24,9 +24,17 @@ object $name;format="Camel"$Build extends Build {
       resolvers += Classpaths.typesafeReleases,
       resolvers += "Scalaz Bintray Repo" at "http://dl.bintray.com/scalaz/releases",
       libraryDependencies ++= Seq(
+        "com.escalatesoft.subcut" %% "subcut" % "2.1",
+        "com.novus" %% "salat" % "1.9.8",
+        "com.typesafe" % "config" % "1.3.1",
+        "com.wix" %% "accord-core" % "0.5",
+        "org.scalaj" %% "scalaj-http" % "2.2.1",
+        "org.json4s" %% "json4s-jackson" % "3.3.0",
+        "org.mockito" % "mockito-all" % "1.10.5" % "test",
         "org.scalatra" %% "scalatra" % ScalatraVersion,
+        "org.scalatra" %% "scalatra-auth" % ScalatraVersion,
         "org.scalatra" %% "scalatra-scalate" % ScalatraVersion,
-        "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test",
+        "org.scalatra" %% "scalatra-scalatest" % ScalatraVersion % "test",
         "ch.qos.logback" % "logback-classic" % "1.1.5" % "runtime",
         "org.eclipse.jetty" % "jetty-webapp" % "9.2.15.v20160210" % "container",
         "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
