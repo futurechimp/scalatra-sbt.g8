@@ -5,7 +5,7 @@ import $package$.testsupport.{ControllerTest, TestStack}
 
 class ApiDocsControllerSpec extends ControllerTest with TestStack {
 
-  implicit val swagger = new AntarApiDocs
+  implicit val swagger = new $name;format="Camel"$ApiDocs
 
   addServlet(new ApiDocsController, "/*")
 
