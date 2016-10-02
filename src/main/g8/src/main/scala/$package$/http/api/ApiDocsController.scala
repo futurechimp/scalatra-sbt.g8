@@ -1,4 +1,4 @@
-package com.headlondon.virtaus.http.api.controllers
+package $package$.http.api
 
 import org.scalatra.ScalatraServlet
 import org.scalatra.swagger.{ApiInfo, JacksonSwaggerBase, Swagger}

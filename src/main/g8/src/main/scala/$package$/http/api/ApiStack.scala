@@ -1,20 +1,21 @@
-trait ApiStack extends ScalatraServlet with ScalateSupport {
+package $package$.http.api
 
-  implicit val jsonFormats: Formats = DefaultFormats + new StringObjectIdSerializer ++ JodaTimeSerializers.all
+import com.escalatesoft.subcut.inject.Injectable
+import $package$.http.api.serializers.StringObjectIdSerializer
+import org.json4s.ext.JodaTimeSerializers
+import org.json4s.{DefaultFormats, Formats, _}
+import org.scalatra._
+import org.scalatra.json.JacksonJsonSupport
+import org.scalatra.swagger.SwaggerSupport
 
-  before() {
-    contentType = formats("json")
-  }
+trait ApiStack extends ScalatraServlet with Injectable with SwaggerSupport with JacksonJsonSupport {
 
+    implicit val jsonFormats: Formats = DefaultFormats + new StringObjectIdSerializer ++ JodaTimeSerializers.all
 
-  notFound {
-    // remove content type in case it was set through an action
-    contentType = null
-    // Try to render a ScalateTemplate if no route matched
-    findTemplate(requestPath) map { path =>
-      contentType = "text/html"
-      layoutTemplate(path)
-    } orElse serveStaticResource() getOrElse resourceNotFound()
-  }
+    before() {
+        contentType = formats("json")
+    }
+
+    def error(handler: Any): Unit = ???
 
 }

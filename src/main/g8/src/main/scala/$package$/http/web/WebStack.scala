@@ -3,6 +3,8 @@ package $package$.http.web
 import com.escalatesoft.subcut.inject.Injectable
 import org.scalatra.ScalatraServlet
 import org.scalatra.scalate.ScalateSupport
+import $package$.http.web.auth.AuthenticationSupport
+
 
 trait WebStack extends ScalatraServlet with ScalateSupport with Injectable with AuthenticationSupport {
 
