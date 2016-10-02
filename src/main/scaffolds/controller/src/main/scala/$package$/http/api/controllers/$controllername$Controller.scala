@@ -1,6 +1,6 @@
 package $package$.http.api.controllers
 
-class $name;format="Camel"$Controller extends ApiStack {
+class $controllername;format="Camel"$Controller extends ApiStack {
   get("/") {
     "foo"
   }
