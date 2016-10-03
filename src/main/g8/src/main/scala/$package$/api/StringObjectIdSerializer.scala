@@ -1,4 +1,4 @@
-package $package$.http.api.serializers
+package $package$.api
 
 import org.bson.types.ObjectId
 import org.json4s.{Serializer, Formats}

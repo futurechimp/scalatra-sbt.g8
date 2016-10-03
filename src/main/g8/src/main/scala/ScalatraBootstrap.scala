@@ -2,7 +2,7 @@ import $package$._
 import org.scalatra._
 import javax.servlet.ServletContext
 import $package$.bindings.AppBindings
-import $package$.http.api.{ApiDocsController, $name;format="Camel"$ApiDocs}
+import $package$.api.{ApiDocsController, $name;format="Camel"$ApiDocs}
 
 class ScalatraBootstrap extends LifeCycle {
   implicit val swagger = new $name;format="Camel"$ApiDocs

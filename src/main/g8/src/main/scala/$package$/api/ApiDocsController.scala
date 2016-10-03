@@ -1,4 +1,4 @@
-package $package$.http.api
+package $package$.api
 
 import org.scalatra.ScalatraServlet
 import org.scalatra.swagger.{ApiInfo, JacksonSwaggerBase, Swagger}

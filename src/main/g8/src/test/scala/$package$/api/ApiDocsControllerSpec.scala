@@ -1,4 +1,4 @@
-package $package$.http.api
+package $package$.api
 
 import $package$.testsupport.{ControllerTest, TestStack}
 
